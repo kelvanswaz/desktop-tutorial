@@ -75,7 +75,7 @@ html {
 
 
 
-/*tesst*/
+/*package*/
         
         /* Custom Tailwind colors */
         .bg-dark-charcoal {
@@ -114,44 +114,4 @@ html {
         }
    
 
-        /* FAQ */
-
-/* Custom styles for the dropdown arrow */
-.accordion-header::after {
-    content: '⌄'; /* Unicode for a small downward arrow */
-    font-size: 1.5rem; /* Larger size for better visibility */
-    transition: transform 0.3s ease-in-out;
-}
-.accordion-header.active::after {
-    transform: rotate(180deg); /* Rotate the arrow when active */
-}
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    /* Transition for max-height and padding for smooth animation */
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    /* Ensure horizontal padding is always there, but vertical padding is controlled by .open */
-    padding-left: 1rem; /* Equivalent to px-4 */
-    padding-right: 1rem; /* Equivalent to px-4 */
-    padding-top: 0; /* Ensure no initial top padding */
-    padding-bottom: 0; /* Ensure no initial bottom padding */
-    background-color: transparent; /* Default transparent background */
-}
-.accordion-content.open {
-    /* max-height will be set by JavaScript dynamically */
-    padding-top: 0.5rem; /* Set top padding to 0.5rem when open */
-    padding-bottom: 5rem; /* Increased bottom padding to 5rem when open */
-    background-color: white; /* Change background to white when open */
-}
-
-/* Base style for accordion header to reserve space for the border */
-.accordion-header {
-    border-left: 4px solid transparent; /* Always reserve space for the border, but make it transparent */
-    transition: border-left-color 0.2s ease-in-out; /* Smooth transition for the border color */
-}
-
-/* New hover effect for the accordion header */
-.accordion-header:hover {
-    border-left-color: #382714; /* Change border color to brown on hover */
-    /* No padding adjustment needed here as space is already reserved */
-}
+        
