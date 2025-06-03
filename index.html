@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Vintage Stamp.co - Capture your memories with our unique vintage-style photobooth experience. Perfect for weddings, parties, and corporate events.">
+    <title>The Vintage Stamp.co | Vintage Photobooth Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vintage-brown': '#382714',
+                        'vintage-cream': '#e0dfdb',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-vintage-brown">
+    <nav class="bg-vintage-cream bg-opacity-90 fixed w-full z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl md:text-3xl font-bold tracking-wider">
+                The Vintage Stamp<span class="text-sm align-top">.co</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#how-it-works" class="hover:text-vintage-brown/70 transition-colors">How It Works</a>
+                <a href="#packages" class="hover:text-vintage-brown/70 transition-colors">Packages</a>
+                <a href="#faq" class="hover:text-vintage-brown/70 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-vintage-brown/70 transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-vintage-cream absolute w-full shadow-md" id="mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#how-it-works" class="block py-2 hover:text-vintage-brown/70 transition-colors">How It Works</a>
+                <a href="#packages" class="block py-2 hover:text-vintage-brown/70 transition-colors">Packages</a>
+                <a href="#faq" class="block py-2 hover:text-vintage-brown/70 transition-colors">FAQ</a>
+                <a href="#contact" class="block py-2 hover:text-vintage-brown/70 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-pattern min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Capture Your Memories, <br><span class="italic">Vintage Style.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-lg">
+                        Experience our unique photobooth services that create lasting memories for your special events. Choose between vintage newspaper prints or classic photo booth fun.
+                    </p>
+                    <a href="#packages" class="btn-primary inline-block bg-vintage-brown text-vintage-cream font-medium py-3 px-8 rounded-md text-lg shadow-lg">
+                        Explore Our Packages
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 border-t-4 border-l-4 border-vintage-brown opacity-50"></div>
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 border-b-4 border-r-4 border-vintage-brown opacity-50"></div>
+                        
+                        <svg class="w-full h-auto" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="150" y="120" width="200" height="160" rx="10" fill="#382714"></rect>
+                            <rect x="160" y="130" width="180" height="140" rx="5" fill="#e0dfdb"></rect>
+                            <circle cx="250" cy="200" r="60" fill="#382714"></circle>
+                            <circle cx="250" cy="200" r="50" fill="#222"></circle>
+                            <circle cx="250" cy="200" r="40" fill="#444"></circle>
+                            <circle cx="250" cy="200" r="25" fill="#111"></circle>
+                            <circle cx="235" cy="185" r="5" fill="white" opacity="0.5"></circle>
+                            <rect x="300" y="140" width="30" height="20" rx="5" fill="#382714"></rect>
+                            <rect x="170" y="140" width="30" height="20" rx="5" fill="#382714"></rect>
+                            <rect x="200" y="300" width="100" height="20" rx="5" fill="#382714"></rect>
+                            
+                            <rect x="320" y="180" width="180" height="220" rx="2" fill="#e0dfdb"></rect>
+                            <rect x="330" y="190" width="160" height="30" fill="#382714" opacity="0.9"></rect>
+                            <text x="410" y="212" font-family="serif" font-size="16" fill="#e0dfdb" text-anchor="middle" font-weight="bold">THE VINTAGE TIMES</text>
+                            <line x1="330" y1="230" x2="490" y2="230" stroke="#382714" stroke-width="1" opacity="0.5"></line>
+                            
+                            <rect x="340" y="240" width="70" height="70" fill="#382714" opacity="0.2"></rect>
+                            <circle cx="375" cy="275" r="20" fill="#382714" opacity="0.3"></circle>
+                            <rect x="340" y="320" width="140" height="5" fill="#382714" opacity="0.3"></rect>
+                            <rect x="340" y="330" width="140" height="5" fill="#382714" opacity="0.3"></rect>
+                            <rect x="340" y="340" width="140" height="5" fill="#382714" opacity="0.3"></rect>
+                            <rect x="340" y="350" width="100" height="5" fill="#382714" opacity="0.3"></rect>
+                            
+                            <rect x="420" y="240" width="60" height="70" fill="#382714" opacity="0.2"></rect>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12">Perfect For Any Occasion</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <div class="flex flex-col items-center text-center p-6 rounded-lg hover:bg-vintage-cream transition-colors">
+                    <div class="w-20 h-20 mb-4 flex items-center justify-center bg-vintage-cream rounded-full">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold mb-2">Weddings</h3>
+                    <p class="text-sm">Give your guests a memorable keepsake from your special day.</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center p-6 rounded-lg hover:bg-vintage-cream transition-colors">
+                    <div class="w-20 h-20 mb-4 flex items-center justify-center bg-vintage-cream rounded-full">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold mb-2">Corporate Events</h3>
+                    <p class="text-sm">Engage attendees with a unique branded experience.</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center p-6 rounded-lg hover:bg-vintage-cream transition-colors">
+                    <div class="w-20 h-20 mb-4 flex items-center justify-center bg-vintage-cream rounded-full">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold mb-2">Birthday Parties</h3>
+                    <p class="text-sm">Create lasting memories for your celebration.</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center p-6 rounded-lg hover:bg-vintage-cream transition-colors">
+                    <div class="w-20 h-20 mb-4 flex items-center justify-center bg-vintage-cream rounded-full">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold mb-2">Anniversaries</h3>
+                    <p class="text-sm">Celebrate your love story with vintage-style keepsakes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 md:py-24 bg-vintage-cream newspaper-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
+            
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="vintage-tab tab-active px-6 py-3 text-sm font-medium rounded-l-lg focus:z-10 focus:outline-none" data-tab="vintage">
+                        Vintage Newspaper
+                    </button>
+                    <button type="button" class="classic-tab px-6 py-3 text-sm font-medium bg-white rounded-r-lg focus:z-10 focus:outline-none" data-tab="classic">
+                        Classic Photo Booth
+                    </button>
+                </div>
+            </div>
+            
+            <div id="vintage-process" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-md relative">
+                    <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-vintage-brown text-vintage-cream flex items-center justify-center font-bold text-xl">1</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Strike a Pose</h3>
+                    <p class="mb-6">Guests step up to our vintage-style camera setup for a fun, retro photoshoot.</p>
+                    <div class="h-40 bg-vintage-cream rounded-md flex items-center justify-center">
+                        <svg class="w-24 h-24 text-vintage-brown opacity-60" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md relative">
+                    <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-vintage-brown text-vintage-cream flex items-center justify-center font-bold text-xl">2</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Instant Vintage Prints</h3>
+                    <p class="mb-6">Watch as your photo gets printed on our high-quality 120gsm A4 vintage paper!</p>
+                    <div class="h-40 bg-vintage-cream rounded-md flex items-center justify-center">
+                        <svg class="w-24 h-24 text-vintage-brown opacity-60" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0v3H7V4h6zm-5 7v2h4v-2H8z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md relative">
+                    <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-vintage-brown text-vintage-cream flex items-center justify-center font-bold text-xl">3</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Share Your Memories</h3>
+                    <p class="mb-6">Guests take home a unique, personalized vintage newspaper keepsake to cherish.</p>
+                    <div class="h-40 bg-vintage-cream rounded-md flex items-center justify-center">
+                        <svg class="w-24 h-24 text-vintage-brown opacity-60" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2v-4a2 2 0 002-2h12a2 2 0 002-2V6a2 2 0 00-2-2H4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div id="classic-process" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 hidden">
+                <div class="bg-white p-8 rounded-lg shadow-md relative">
+                    <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-vintage-brown text-vintage-cream flex items-center justify-center font-bold text-xl">1</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Choose Your Props</h3>
+                    <p class="mb-6">Grab some fun props from our curated collection to add a playful touch to your photos.</p>
+                    <div class="h-40 bg-vintage-cream rounded-md flex items-center justify-center">
+                        <i class="fas fa-hat-wizard text-vintage-brown opacity-60 text-6xl"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md relative">
+                    <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-vintage-brown text-vintage-cream flex items-center justify-center font-bold text-xl">2</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Say Cheese!</h3>
+                    <p class="mb-6">Strike a series of poses in front of the camera, creating a fun photo strip.</p>
+                    <div class="h-40 bg-vintage-cream rounded-md flex items-center justify-center">
+                        <i class="fas fa-smile-beam text-vintage-brown opacity-60 text-6xl"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md relative">
+                    <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-vintage-brown text-vintage-cream flex items-center justify-center font-bold text-xl">3</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Print Your Strip</h3>
+                    <p class="mb-6">Your classic photo booth strip prints instantly, ready for you to share and keep.</p>
+                    <div class="h-40 bg-vintage-cream rounded-md flex items-center justify-center">
+                        <i class="fas fa-ticket-alt text-vintage-brown opacity-60 text-6xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="packages" class="max-w-7xl mx-auto my-20 p-6 sm:p-10">
+
+        <section class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-dark-charcoal mb-2">Our Packages</h1>
+            <p class="text-dark-charcoal text-sm">Choose the perfect photo booth experience for your special event.</p>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="rounded-lg shadow-md overflow-hidden flex flex-col">
+                <div class="bg-dark-charcoal text-light-cream p-6 pb-4">
+                    <h2 class="text-2xl font-bold mb-2">The Vintage Newspaper</h2>
+                    <p class="text-sm">Timeless Memories in Print <span class="text-4xl font-extrabold float-right">$788</span></p>
+                </div>
+
+                <div class="bg-light-cream text-dark-charcoal p-6 pt-4 flex-grow">
+                    <p class="text-sm mb-6">Transform your event photos into vintage newspaper prints that tell your story with a unique and nostalgic experience.</p>
+
+                    <h3 class="text-lg font-semibold mb-3">Why Choose This Package?</h3>
+                    <ul class="list-none space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span> <div>
+                                <span class="font-medium">Unlimited Prints for 2 Hours</span>
+                                <p class="text-xs opacity-80">No limits on how many memories your guests can capture.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">Full Customization</span>
+                                <p class="text-xs opacity-80">Personalize newspaper with headlines, dates, messages, and 2 photos per newspaper.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">High-Quality Vintage Aesthetic</span>
+                                <p class="text-xs opacity-80">Retro vibes with premium 120gsm matte paper.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">Digital Copies Included</span>
+                                <p class="text-xs opacity-80">Receive soft copies of all prints after the event.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold mb-3">Available Add-ons</h3>
+                    <div class="flex justify-between items-center text-sm mb-2">
+                        <span>Custom Fabric Backdrop</span>
+                        <span>Contact for pricing</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm mb-2">
+                        <span>Time Extension</span>
+                        <span>$80/hr</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm mb-6">
+                        <span>Instant Soft Copy Sharing Onsite</span>
+                        <span>$100</span>
+                    </div>
+                    </div>
+                <div class="bg-light-cream text-dark-charcoal p-6 pt-0">
+                    <button class="w-full bg-button-dark-brown hover-bg-button-dark-brown text-light-cream font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out">Get a Quote</button>
+                </div>
+            </div>
+
+            <div class="rounded-lg shadow-md overflow-hidden flex flex-col">
+                <div class="bg-dark-charcoal text-light-cream p-6 pb-4">
+                    <h2 class="text-2xl font-bold mb-2">Classic Photo Booth</h2>
+                    <p class="text-sm">Capture the Fun, Instantly! <span class="text-4xl font-extrabold float-right">$688</span></p>
+                </div>
+
+                <div class="bg-light-cream text-dark-charcoal p-6 pt-4 flex-grow">
+                    <p class="text-sm mb-6">Make your event unforgettable with our Classic Photo Booth, packed with endless entertainment and high-quality keepsakes for your guests!</p>
+
+                    <h3 class="text-lg font-semibold mb-3">What's Included:</h3>
+                    <ul class="list-none space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">2 Hours of Unlimited Fun</span>
+                                <p class="text-xs opacity-80">Non-stop photos and prints!</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">Unlimited Printouts & GIFs</span>
+                                <p class="text-xs opacity-80">No limits, just pure enjoyment</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">4R Prints or Photo Strips</span>
+                                <p class="text-xs opacity-80">Choose your preferred style.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">Protective Sleeves</span>
+                                <p class="text-xs opacity-80">Keep memories safe in style.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">Standard Backdrop</span>
+                                <p class="text-xs opacity-80">Simple yet elegant.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">Online Web Gallery</span>
+                                <p class="text-xs opacity-80">Easy access to all photos after the event.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">&#10003;</span>
+                            <div>
+                                <span class="font-medium">Multiple Sharing Options</span>
+                                <p class="text-xs opacity-80">Airdrop, QR code, email, or social media.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold mb-3">Available Add-ons</h3>
+                    <div class="flex justify-between items-center text-sm mb-2">
+                        <span>Custom Backdrop</span>
+                        <span>Contact for pricing</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm mb-6">
+                        <span>Time Extension</span>
+                        <span>$80/hr</span>
+                    </div>
+                    </div>
+                <div class="bg-light-cream text-dark-charcoal p-6 pt-0">
+                    <button class="w-full bg-button-dark-brown hover-bg-button-dark-brown text-light-cream font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-dark-charcoal text-center mb-8">Which Experience is Right for You?</h2>
+            <div class="overflow-x-auto rounded-lg shadow-md">
+                <table class="min-w-full bg-light-cream border-collapse">
+                    <thead>
+                        <tr class="bg-table-header text-table-header">
+                            <th class="py-3 px-4 text-left font-semibold rounded-tl-lg">Feature</th>
+                            <th class="py-3 px-4 text-left font-semibold">Vintage Newspaper</th>
+                            <th class="py-3 px-4 text-left font-semibold rounded-tr-lg">Classic Photo Booth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-table-row">
+                            <td class="py-3 px-4 text-dark-charcoal">Style</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Vintage newspaper prints</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Modern 4R prints or photo strips</td>
+                        </tr>
+                        <tr class="border-b border-table-row">
+                            <td class="py-3 px-4 text-dark-charcoal">Duration</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">2 hours</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">2 hours</td>
+                        </tr>
+                        <tr class="border-b border-table-row">
+                            <td class="py-3 px-4 text-dark-charcoal">Print Format</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">A4 newspaper template</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">4R or photo strips</td>
+                        </tr>
+                        <tr class="border-b border-table-row">
+                            <td class="py-3 px-4 text-dark-charcoal">Digital Sharing</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">After event (or add-on for instant)</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Instant via QR, Airdrop, email</td>
+                        </tr>
+                        <tr class="border-b border-table-row">
+                            <td class="py-3 px-4 text-dark-charcoal">Customization</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Fully customizable newspaper template</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Standard photo booth templates</td>
+                        </tr>
+                        <tr class="border-b border-table-row">
+                            <td class="py-3 px-4 text-dark-charcoal">Best For</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Weddings, anniversaries, elegant events</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Birthday parties, corporate events, casual fun</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-dark-charcoal rounded-bl-lg">Price</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">Contact for quote</td>
+                            <td class="py-3 px-4 text-dark-charcoal opacity-90">$688</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-dark-charcoal text-sm mt-6 mb-4">Not sure which option is best for your event? Let's discuss your needs!</p>
+            <div class="text-center">
+                <button class="bg-button-dark-brown hover-bg-button-dark-brown text-light-cream font-bold py-3 px-8 rounded-md transition duration-300 ease-in-out">Contact Us</button>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-light-cream rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold text-dark-charcoal mb-4 text-center">Vintage Newspaper Sample</h2>
+                <div class="relative w-full max-w-sm mx-auto border border-dark-charcoal p-4 rounded-md overflow-hidden bg-light-cream aspect-[3/4]">
+                    <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-dark-charcoal text-center p-4">
+                        <p class="text-xs mb-1">JOIN & JANE'S PARTY</p>
+                        <h3 class="text-2xl font-bold mb-2">THE VINTAGE TIMES</h3>
+                        <p class="text-lg font-semibold mb-4">SARAH & MICHAEL'S WEDDING</p>
+                        <div class="w-2/3 h-24 bg-light-cream border border-dark-charcoal mb-4 flex items-center justify-center text-dark-charcoal text-xs">
+                            [Image Placeholder]
+                        </div>
+                        <p class="text-xs text-dark-charcoal opacity-70">Powered by The Image Booth Co.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-light-cream rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold text-dark-charcoal mb-4 text-center">Classic Photo Booth Sample</h2>
+                <div class="relative w-full max-w-sm mx-auto border border-dark-charcoal p-4 rounded-md overflow-hidden bg-light-cream aspect-[3/4]">
+                   
+                </div>
+            </div>
+        </section>
+    </section>
+    
+<script src="script.js"></script>
+<section id="faqq">
+    <title>Frequently Asked Questions</title>
+        <!-- Main container for the FAQ section -->
+        <!-- Background set to white to differentiate from the body background, similar to screenshot -->
+        <div class="w-full max-w-2xl bg-light-cream p-6 sm:p-8 rounded-lg shadow-xl">
+            <!-- Main heading with the dark brown/charcoal color -->
+            <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-[#382714] tracking-wide">Frequently Asked Questions</h1>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <!-- Accordion item background set to light cream -->
+                <div class="bg-light-cream rounded-lg shadow-md overflow-hidden">
+                    <!-- Header text color set to dark brown/charcoal -->
+                    <div class="accordion-header flex justify-between items-center p-4 sm:p-5 cursor-pointer text-lg sm:text-xl font-medium text-[#382714] transition duration-200 ease-in-out">
+                        How far in advance should I book?
+                    </div>
+                    <!-- Content text color set to dark brown/charcoal -->
+                    <div class="accordion-content text-[#382714]">
+                        <p>It's recommended to book as early as possible, especially for peak seasons, to ensure availability. We suggest at least 3-6 months in advance for popular dates.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-[#e0dfdb] rounded-lg shadow-md overflow-hidden">
+                    <div class="accordion-header flex justify-between items-center p-4 sm:p-5 cursor-pointer text-lg sm:text-xl font-medium text-[#382714] transition duration-200 ease-in-out">
+                        How much space do you need for setup?
+                    </div>
+                    <div class="accordion-content text-[#382714]">
+                        <p>We typically require a space of approximately 10x10 feet (3x3 meters) for our standard photo booth setup, including props and backdrop. Please let us know if your venue has specific space limitations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-[#e0dfdb] rounded-lg shadow-md overflow-hidden">
+                    <div class="accordion-header flex justify-between items-center p-4 sm:p-5 cursor-pointer text-lg sm:text-xl font-medium text-[#382714] transition duration-200 ease-in-out">
+                        What's the difference between your two packages?
+                    </div>
+                    <div class="accordion-content text-[#382714]">
+                        <p>Our packages differ primarily in duration, number of prints, and included features. The premium package offers longer rental time, unlimited prints, and additional custom branding options. Please refer to our services page for a detailed comparison.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-[#e0dfdb] rounded-lg shadow-md overflow-hidden">
+                    <div class="accordion-header flex justify-between items-center p-4 sm:p-5 cursor-pointer text-lg sm:text-xl font-medium text-[#382714] transition duration-200 ease-in-out">
+                        How long does it take to set up and pack down?
+                    </div>
+                    <div class="accordion-content text-[#382714]">
+                        <p>Setup usually takes about 45-60 minutes, and packing down takes approximately 30-45 minutes. We arrive well in advance of your event start time to ensure everything is ready.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-[#e0dfdb] rounded-lg shadow-md overflow-hidden">
+                    <div class="accordion-header flex justify-between items-center p-4 sm:p-5 cursor-pointer text-lg sm:text-xl font-medium text-[#382714] transition duration-200 ease-in-out">
+                        Do you require a deposit to secure a booking?
+                    </div>
+                    <div class="accordion-content text-[#382714]">
+                        <p>Yes, a non-refundable deposit of 25% of the total booking fee is required to secure your date. The remaining balance is due 7 days prior to your event.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-[#e0dfdb] rounded-lg shadow-md overflow-hidden">
+                    <div class="accordion-header flex justify-between items-center p-4 sm:p-5 cursor-pointer text-lg sm:text-xl font-medium text-[#382714] transition duration-200 ease-in-out">
+                        Can we customize the photo booth templates?
+                    </div>
+                    <div class="accordion-content text-[#382714]">
+                        <p>Absolutely! We offer full customization of photo booth templates, including your event logo, colors, and text. We'll work with you to create a design that perfectly matches your event theme.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>    
+
+
+    <script src="script.js"></script>
+    <section id="packagess" class="py-16 md:py-24 bg-white vintage-texture">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12">Our Packages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="package-card bg-vintage-cream p-8 rounded-lg shadow-lg border-b-4 border-vintage-brown flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-3xl font-bold mb-4">Newspaper Print Package</h3>
+                        <p class="text-vintage-brown/80 mb-6">Capture the moment with a truly unique vintage newspaper print experience. Perfect for a memorable and distinctive keepsake.</p>
+                        <ul class="list-none space-y-3 mb-8">
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Unlimited A4 Newspaper Prints
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Vintage Camera Setup
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Custom Newspaper Header Design
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Themed Props
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Friendly On-site Attendant
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Digital Copies of all Photos
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <a href="#contact" class="btn-primary inline-block bg-vintage-brown text-vintage-cream font-medium py-3 px-8 rounded-md text-lg shadow-md">
+                            Inquire for Price
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="package-card bg-vintage-cream p-8 rounded-lg shadow-lg border-b-4 border-vintage-brown flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-3xl font-bold mb-4">Classic Photo Booth Package</h3>
+                        <p class="text-vintage-brown/80 mb-6">Bring the timeless fun of a traditional photo booth to your event. Guests will love the instant photo strips!</p>
+                        <ul class="list-none space-y-3 mb-8">
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Unlimited Photo Strips (2x6 inches)
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> High-Quality DSLR Camera
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Choice of Backdrops
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Wide Variety of Fun Props
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Friendly On-site Attendant
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <i class="fas fa-check-circle text-vintage-brown mr-3 flex-shrink-0"></i> Digital Copies of all Photos
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <a href="#contact" class="btn-primary inline-block bg-vintage-brown text-vintage-cream font-medium py-3 px-8 rounded-md text-lg shadow-md">
+                            Inquire for Price
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <div class="faq-item border border-vintage-brown/20 rounded-lg p-6 cursor-pointer">
+                    <div class="flex justify-between items-center faq-question">
+                        <h3 class="font-semibold text-lg md:text-xl">What areas do you serve?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-vintage-brown"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-vintage-brown/80">
+                        <p>We primarily serve events within the greater [Your City/Region] area. Please contact us with your event location for specific availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-vintage-brown/20 rounded-lg p-6 cursor-pointer">
+                    <div class="flex justify-between items-center faq-question">
+                        <h3 class="font-semibold text-lg md:text-xl">How much space do you need?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-vintage-brown"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-vintage-brown/80">
+                        <p>For the Vintage Newspaper setup, we recommend a space of at least 8x8 feet. For the Classic Photo Booth, about 6x6 feet is sufficient. This allows for comfortable movement and prop placement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-vintage-brown/20 rounded-lg p-6 cursor-pointer">
+                    <div class="flex justify-between items-center faq-question">
+                        <h3 class="font-semibold text-lg md:text-xl">Can I customize the prints?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-vintage-brown"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-vintage-brown/80">
+                        <p>Absolutely! For the Newspaper Print Package, you can customize the newspaper header. For the Classic Photo Booth, you can add custom text or logos to your photo strips.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-vintage-brown/20 rounded-lg p-6 cursor-pointer">
+                    <div class="flex justify-between items-center faq-question">
+                        <h3 class="font-semibold text-lg md:text-xl">Is an attendant included?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-vintage-brown"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-vintage-brown/80">
+                        <p>Yes, all our packages include a friendly and professional attendant to ensure a smooth and fun experience for your guests throughout the event.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-vintage-brown/20 rounded-lg p-6 cursor-pointer">
+                    <div class="flex justify-between items-center faq-question">
+                        <h3 class="font-semibold text-lg md:text-xl">Do you provide props?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-vintage-brown"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-vintage-brown/80">
+                        <p>Yes, both packages come with a selection of themed props to enhance the fun and creativity of your photos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-vintage-brown text-vintage-cream text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Ready to Stamp Your Event with Vintage Charm?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-vintage-cream/80">
+                Contact us today to check availability, get a personalized quote, and book your unique photobooth experience!
+            </p>
+            <a href="#contact" class="btn-primary inline-block bg-vintage-cream text-vintage-brown font-medium py-3 px-8 rounded-md text-lg shadow-lg">
+                Get a Quote Now
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-white newspaper-bg">
+        <div class="container mx-auto px-4 max-w-lg">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12">Contact Us</h2>
+            
+            <form class="bg-vintage-cream p-8 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-vintage-brown text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-vintage-brown leading-tight focus:outline-none focus:ring-2 focus:ring-vintage-brown/50" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-vintage-brown text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-vintage-brown leading-tight focus:outline-none focus:ring-2 focus:ring-vintage-brown/50" required>
+                </div>
+                <div class="mb-4">
+                    <label for="event-date" class="block text-vintage-brown text-sm font-bold mb-2">Event Date (Approx.):</label>
+                    <input type="date" id="event-date" name="event-date" class="shadow appearance-none border rounded w-full py-2 px-3 text-vintage-brown leading-tight focus:outline-none focus:ring-2 focus:ring-vintage-brown/50">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-vintage-brown text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-vintage-brown leading-tight focus:outline-none focus:ring-2 focus:ring-vintage-brown/50" placeholder="Tell us about your event and what you're looking for!"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn-primary bg-vintage-brown text-vintage-cream font-medium py-3 px-8 rounded-md text-lg shadow-lg">
+                        Send Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-vintage-brown text-vintage-cream py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 The Vintage Stamp.co. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-vintage-cream/80 transition-colors"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="hover:text-vintage-cream/80 transition-colors"><i class="fab fa-facebook-f"></i> Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

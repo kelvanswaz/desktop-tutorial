@@ -1,0 +1,157 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom background textures using SVG data URIs */
+.vintage-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23382714' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.hero-pattern {
+    background-color: #e0dfdb;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23382714' fill-opacity='0.07'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3Csvg%3E");
+}
+
+.newspaper-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm28 0h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23382714' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* FAQ Item Hover Effect */
+.faq-item:hover {
+    border-color: #382714;
+}
+
+/* FAQ Answer Collapse/Expand */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Adjust as needed for content */
+    transition: max-height 0.5s ease-in;
+}
+
+/* FAQ Icon Rotation */
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Primary Button Hover Effect */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(56, 39, 20, 0.2);
+}
+
+/* Package Card Hover Effect */
+.package-card {
+    transition: all 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(56, 39, 20, 0.1), 0 10px 10px -5px rgba(56, 39, 20, 0.04);
+}
+
+/* Tab Active State */
+.tab-active {
+    background-color: #382714;
+    color: #e0dfdb;
+}
+
+
+
+/*tesst*/
+        
+        /* Custom Tailwind colors */
+        .bg-dark-charcoal {
+            background-color: #382714;
+        }
+        .text-light-cream {
+            color: #e0dfdb;
+        }
+        .text-dark-charcoal {
+            color: #382714;
+        }
+        .border-dark-charcoal {
+            border-color: #382714;
+        }
+        .bg-light-cream {
+            background-color: #e0dfdb;
+        }
+        .bg-table-header {
+            background-color: #d1cfcb; /* Slightly darker cream for table header */
+        }
+        .text-table-header {
+            color: #382714;
+        }
+        .border-table-row {
+            border-color: #c0bdb8; /* Slightly darker border for table rows */
+        }
+        .bg-button-dark-brown {
+            background-color: #2a1c0d; /* Darker brown for buttons */
+        }
+        .hover-bg-button-dark-brown:hover {
+            background-color: #1a1006; /* Even darker on hover */
+        }
+        /* Custom checkmark color for dark background */
+        .text-checkmark-dark-bg {
+            color: #a0a0a0; /* A light gray for checkmarks on dark background */
+        }
+   
+
+        /* FAQ */
+
+/* Custom styles for the dropdown arrow */
+.accordion-header::after {
+    content: '⌄'; /* Unicode for a small downward arrow */
+    font-size: 1.5rem; /* Larger size for better visibility */
+    transition: transform 0.3s ease-in-out;
+}
+.accordion-header.active::after {
+    transform: rotate(180deg); /* Rotate the arrow when active */
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    /* Transition for max-height and padding for smooth animation */
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    /* Ensure horizontal padding is always there, but vertical padding is controlled by .open */
+    padding-left: 1rem; /* Equivalent to px-4 */
+    padding-right: 1rem; /* Equivalent to px-4 */
+    padding-top: 0; /* Ensure no initial top padding */
+    padding-bottom: 0; /* Ensure no initial bottom padding */
+    background-color: transparent; /* Default transparent background */
+}
+.accordion-content.open {
+    /* max-height will be set by JavaScript dynamically */
+    padding-top: 0.5rem; /* Set top padding to 0.5rem when open */
+    padding-bottom: 5rem; /* Increased bottom padding to 5rem when open */
+    background-color: white; /* Change background to white when open */
+}
+
+/* Base style for accordion header to reserve space for the border */
+.accordion-header {
+    border-left: 4px solid transparent; /* Always reserve space for the border, but make it transparent */
+    transition: border-left-color 0.2s ease-in-out; /* Smooth transition for the border color */
+}
+
+/* New hover effect for the accordion header */
+.accordion-header:hover {
+    border-left-color: #382714; /* Change border color to brown on hover */
+    /* No padding adjustment needed here as space is already reserved */
+}
